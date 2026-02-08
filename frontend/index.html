@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Social Media Downloader</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="title-wrap">
+    <img src="SMD.png" alt="SMD Logo" class="logo">
+    <h3>Social Media Video Downloader</h3>
+  </div>
+
+  <div class="toggle" onclick="toggleTheme()">
+    <span></span>
+  </div>
+</div>
+
+<div class="snackbar">
+  <button class="youtube active" onclick="setPlatform('youtube',this)">YouTube</button>
+  <button class="instagram" onclick="setPlatform('instagram',this)">Instagram</button>
+  <button class="facebook" onclick="setPlatform('facebook',this)">Facebook</button>
+  <button class="x" onclick="setPlatform('x',this)">X</button>
+</div>
+
+<div class="card">
+  <div class="input-wrap">
+    <input id="url" placeholder="Paste YouTube video URL" oninput="toggleClear()">
+    <button class="clear-btn" id="clearBtn" onclick="clearInput()">×</button>
+  </div>
+  <button class="main" onclick="fetchInfo()">Fetch</button>
+</div>
+
+<div id="info"></div>
+
+<h3>Active Downloads</h3>
+<div id="jobs"></div>
+
+<h3>Download History</h3>
+<div id="history"></div>
+
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
