@@ -1,4 +1,4 @@
-const API = "http://127.0.0.1:8000";
+const API = "smd-video-downloader-production.up.railway.app";
 let platform = "youtube";
 
 /* ---------- THEME ---------- */
